@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: languaship_backend_development
+
+test:
+  <<: *default
+  database: languaship_backend_test
+
+production:
+  <<: *default
+  database: languaship_backend_production
+  username: languaship_backend
+  password: <%= ENV['LANGUASHIP_BACKEND_DATABASE_PASSWORD'] %>
