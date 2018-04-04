@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Api::V0::PingsController, type: :request do
-  describe 'GET /v0/ping' do
+  describe 'GET /v0/pings' do
     it 'should return Pong' do
-      get '/api/v0/ping'
+      get '/api/v0/pings'
 
       json_response = JSON.parse(response.body)
       expect(response.status).to eq 200
