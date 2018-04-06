@@ -1,5 +1,6 @@
 class Api::V1::UserController < ApiController
-  before_action :authenticate_api_v1_user!, :users_near_you
+  # before_action :authenticate_api_v1_user!
+  before_action :users_near_you
 
   def index
     render json: @users, status: :ok
