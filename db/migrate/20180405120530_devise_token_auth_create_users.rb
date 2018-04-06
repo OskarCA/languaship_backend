@@ -54,10 +54,4 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.2]
     add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,       unique: true
   end
-
-  class User < ApplicationRecord
-    def tokens_has_json_column_type?
-      false
-    end
-  end
 end
