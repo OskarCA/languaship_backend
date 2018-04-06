@@ -1,0 +1,21 @@
+{"data" => {
+   "id" => 32,
+   "provider" => "email",
+   "uid" => "example@blue.com",
+   "allow_password_change" => false,
+   "name" => "Aiden Jubelin",
+   "nickname" => "MeepMills",
+   "image" => nil,
+   "email" => "example@blue.com"
+   }}
+
+{"data" => {
+   "id" => 33,
+   "provider" => "email",
+   "uid" => "hello@itsme.com",
+   "allow_password_change" => false,
+   "name" => "Aiden Jubelin",
+   "nickname" => "MeepMills",
+   "image" => nil,
+   "email" => "hello@itsme.com"
+  }}
