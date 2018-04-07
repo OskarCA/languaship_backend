@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe 'Sessions', type: :request do
   let(:user) { FactoryBot.create(:user) }
   let(:headers) { { HTTP_ACCEPT: 'application/json' } }
