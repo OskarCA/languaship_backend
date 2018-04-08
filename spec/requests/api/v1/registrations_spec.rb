@@ -6,7 +6,8 @@ RSpec.describe 'User Registration', type: :request do
   context 'with valid credentials' do
     it 'returns a user and token' do
       post '/api/v1/auth', params: {
-        email: 'example@craftacademy.se', password: 'password',
+        email: 'example@craftacademy.se', 
+        password: 'password',
         password_confirmation: 'password'
       }, headers: headers
 
@@ -18,7 +19,8 @@ RSpec.describe 'User Registration', type: :request do
   context 'returns an error message when user submits' do
     it 'non-matching password confirmation' do
       post '/api/v1/auth', params: {
-        email: 'example@craftacademy.se', password: 'password',
+        email: 'example@craftacademy.se',
+        password: 'password',
         password_confirmation: 'wrong_password'
       }, headers: headers
 
@@ -29,7 +31,8 @@ RSpec.describe 'User Registration', type: :request do
 
     it 'an invalid email address' do
       post '/api/v1/auth', params: {
-        email: 'example@craft', password: 'password',
+        email: 'example@craft',
+        password: 'password',
         password_confirmation: 'password'
       }, headers: headers
 
@@ -38,13 +41,16 @@ RSpec.describe 'User Registration', type: :request do
     end
 
     it 'an already registered email' do
-      FactoryBot.create(:user, email: 'example@craftacademy.se',
-                                password: 'password',
-                                password_confirmation: 'password')
+      FactoryBot.create(:user,
+                        email: 'example@craftacademy.se',
+                        password: 'password',
+                        password_confirmation: 'password'
+                       )
 
       post '/api/v1/auth', params: {
-        email: 'example@craftacademy.se', password: 'password',
-        password_confirmation: 'password'
+         email: 'example@craftacademy.se', 
+         password: 'password',
+         password_confirmation: 'password'
       }, headers: headers
 
       expect(response_json['errors']['email']).to eq ['has already been taken']

@@ -7,7 +7,8 @@ RSpec.describe Api::V1::UserController, type: :request do
 
     it 'Should return all user' do
       get '/api/v1/user', headers: {
-        email: user.email, password: user.password
+        email: user.email, 
+        password: user.password
       }
 
       expected_response = eval(file_fixture('user.txt').read)
