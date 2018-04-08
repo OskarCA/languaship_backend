@@ -5,10 +5,10 @@ RSpec.describe Api::V1::UserController, type: :request do
     let!(:user) { create(:user) }
     let(:object) { JSON.parse(response.body)}
 
-    it 'Should return all users' do
-      get '/api/v1/user', params: {
-        email: user.email, encrypted_password: user.encrypted_password
-      }, headers: headers
+    it 'Should return all user' do
+      get '/api/v1/user', headers: {
+        email: user.email, password: user.password
+      }
 
       expected_response = eval(file_fixture('user.txt').read)
     end
