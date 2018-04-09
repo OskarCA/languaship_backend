@@ -1,14 +1,5 @@
-{"data" => {
-   "id": 33,
-   "provider": "email",
-   "uid": "hello@itsme.com",
-   "name": "Aiden Jubelin",
-   "nickname": "MeepMills",
-   "image": nil,
-   "email": "hello@itsme.com",
-   "age": 18,
-   "gender": "user.gender",
-   "location": "user.location",
-   "nativeLanguage": "user.native",
-   "learningLanguage": "user.learn"
-  }}
+[{
+   "id" => user.id,
+   "name" => user.name,
+   "email" => user.email
+  }]
