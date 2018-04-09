@@ -1,0 +1,9 @@
+{"data" => {
+   "id": 33,
+   "provider": "email",
+   "uid": "hello@itsme.com",
+   "name": "Aiden Jubelin",
+   "nickname": "MeepMills",
+   "image": nil,
+   "email": "hello@itsme.com"
+  }}
