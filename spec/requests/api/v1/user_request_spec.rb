@@ -15,7 +15,7 @@ RSpec.describe Api::V1::UserController, type: :request do
     end
 
     it 'Should return one user' do
-      get '/api/v1/user/:id', headers: headers
+      get "/api/v1/user/#{user.id}", headers: headers
 
       expected_response = eval(file_fixture('user.txt').read)
       expect(object).to eq expected_response
