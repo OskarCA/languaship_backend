@@ -4,4 +4,12 @@
    "attributes" => {
      "name" => "#{user.name}",
      "email" => "#{user.email}"
+}},
+
+{
+   "id" => "#{user.id}",
+   "type"=> "users",
+   "attributes" => {
+     "name" => "#{user.name}",
+     "email" => "#{user.email}"
 }}]}

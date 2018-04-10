@@ -6,6 +6,11 @@ RSpec.describe Api::V1::UserController, type: :request do
     let(:object) { JSON.parse(response.body)}
     let(:credentials) { user.create_new_auth_token }
     let(:headers) { { HTTP_ACCEPT: 'application/json' }.merge!(credentials) }
+    before do
+      create(:user, email: "harambe@dead.com", name: "harambe")
+    end
+
+
 
     it 'Should return all users' do
       get '/api/v1/user', headers: headers

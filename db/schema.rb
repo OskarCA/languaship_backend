@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2018_04_10_121156) do
   create_table "languages_users", id: false, force: :cascade do |t|
     t.bigint "language_id", null: false
     t.bigint "user_id", null: false
+    t.index ["language_id", "user_id"], name: "index_languages_users_on_language_id_and_user_id"
+    t.index ["user_id", "language_id"], name: "index_languages_users_on_user_id_and_language_id"
   end
 
   create_table "users", force: :cascade do |t|
