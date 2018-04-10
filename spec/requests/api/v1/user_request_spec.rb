@@ -7,9 +7,11 @@ RSpec.describe Api::V1::UserController, type: :request do
     let(:credentials) { user.create_new_auth_token }
     let(:headers) { { HTTP_ACCEPT: 'application/json' }.merge!(credentials) }
 
-    before do
-      2.times do
-        create(:user)
+    context 'create two users' do
+      before do
+        2.times do
+          create(:user)
+        end
       end
     end
 
