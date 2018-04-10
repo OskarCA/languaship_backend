@@ -2,19 +2,19 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::UserController, type: :request do
   describe 'GET /api/v1/user' do
-    let!(:user) { create(:user) }
+    let!(:user)  { create(:user) }
     let(:object) { JSON.parse(response.body)}
     let(:credentials) { user.create_new_auth_token }
     let(:headers) { { HTTP_ACCEPT: 'application/json' }.merge!(credentials) }
+
     before do
-      create(:user, email: "harambe@dead.com", name: "harambe")
+      2.times do
+        create(:user)
+      end
     end
-
-
 
     it 'Should return all users' do
       get '/api/v1/user', headers: headers
-
       expected_response = eval(file_fixture('users.txt').read)
       expect(object).to eq expected_response
     end

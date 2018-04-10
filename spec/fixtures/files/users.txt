@@ -2,14 +2,23 @@
    "id" => "#{user.id}",
    "type"=> "users",
    "attributes" => {
-     "name" => "#{user.name}",
-     "email" => "#{user.email}"
+     "languages" => [],
+     "name" => "user1",
+     "email" => "email1@email.com"
 }},
-
 {
-   "id" => "#{user.id}",
+   "id" => "#{user.id+1}",
    "type"=> "users",
    "attributes" => {
-     "name" => "#{user.name}",
-     "email" => "#{user.email}"
+     "languages" => [],
+     "name" => "user2",
+     "email" => "email2@email.com"
+}},
+{
+   "id" => "#{user.id+2}",
+   "type"=> "users",
+   "attributes" => {
+     "languages" => [],
+     "name" => "user3",
+     "email" => "email3@email.com"
 }}]}

@@ -2,6 +2,7 @@
    "id" => "#{user.id}",
    "type"=> "users",
    "attributes" => {
+     "languages" => [],
      "name" => "#{user.name}",
      "email" => "#{user.email}"
 }}}
