@@ -10,7 +10,7 @@ RSpec.describe Api::V1::UserController, type: :request do
     it 'Should return all users' do
       get '/api/v1/user', headers: headers
 
-      expected_response = eval(file_fixture('user.txt').read)
+      expected_response = eval(file_fixture('users.txt').read)
       expect(object).to eq expected_response
     end
 
