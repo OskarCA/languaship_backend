@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :language do
-    native "MyString"
-    learn "MyString"
+    native true
+    learn false
+    name "Dutch"
   end
 end
