@@ -10,7 +10,6 @@ class Api::V1::UserController < ApiController
   end
 
   private
-
   def users_near_you
     @users = User.all
     @user = User.find_by(params[:id])

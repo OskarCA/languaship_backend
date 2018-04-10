@@ -1,7 +1,0 @@
-{"data" => {
-   "id" => user.id,
-   "provider": "email",
-   "uid": "example@blue.com",
-   "image": nil,
-   "email": "example@blue.com"
-   }}
