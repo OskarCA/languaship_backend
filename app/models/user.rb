@@ -5,6 +5,4 @@ class User < ActiveRecord::Base
 
   has_one :location
   has_and_belongs_to_many :languages
-  # validates :age, :gender, presence: true
-  validates_presence_of :age
 end

@@ -5,9 +5,8 @@ RSpec.describe 'User Registration', type: :request do
 
   context 'with valid credentials' do
     it 'returns a user and token' do
-        binding.pry
       post '/api/v1/auth', params: {
-        email: 'example@craftacademy.se', 
+        email: 'example@craftacademy.se',
         password: 'password',
         password_confirmation: 'password'
       }, headers: headers
@@ -49,7 +48,7 @@ RSpec.describe 'User Registration', type: :request do
                        )
 
       post '/api/v1/auth', params: {
-         email: 'example@craftacademy.se', 
+         email: 'example@craftacademy.se',
          password: 'password',
          password_confirmation: 'password'
       }, headers: headers
