@@ -29,6 +29,8 @@ RSpec.describe User, type: :model do
     it { is_expected.to have_db_column :tokens }
     it { is_expected.to have_db_column :created_at }
     it { is_expected.to have_db_column :updated_at }
+    it { is_expected.to have_db_column :gender }
+    it { is_expected.to have_db_column :age }
   end
 
   describe 'Associations' do
