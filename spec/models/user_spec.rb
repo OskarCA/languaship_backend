@@ -31,6 +31,10 @@ RSpec.describe User, type: :model do
     it { is_expected.to have_db_column :updated_at }
   end
 
+  describe 'Associations' do
+    it { is_expected.to have_and_belong_to_many :languages }
+  end
+
   describe 'Validations' do
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_confirmation_of(:password) }
@@ -50,8 +54,8 @@ RSpec.describe User, type: :model do
 end
 
     context 'should have a valid email address' do
-      emails = ['asdf@ds.com', 
-                'hello@example.uk', 
+      emails = ['asdf@ds.com',
+                'hello@example.uk',
                 'test1234@yahoo.si',
                 'asdf@example.eu'
               ]

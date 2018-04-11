@@ -10,6 +10,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rack-cors', require: 'rack/cors'
 gem 'coveralls', require: false
 gem 'devise_token_auth'
+gem 'active_model_serializers', '~> 0.10.2'
 
 group :development, :test do
   gem 'pry-rails'
@@ -23,4 +24,8 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'jsonapi-rspec', require: false
 end

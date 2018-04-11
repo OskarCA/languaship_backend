@@ -12,12 +12,15 @@ RSpec.describe 'Sessions', type: :request do
 
       expected_response = {
         'data' => {
-          'id' => user.id, 'uid' => user.email,
+          'id' => user.id,
           'email' => user.email,
-          'provider' => 'email', 
-          'name' => user.name, 
+          'provider' => 'email',
+          'uid' => user.email,
+          'allow_password_change' => false,
+          'name' => user.name,
           'nickname' => user.nickname,
-          'image' => nil, 'allow_password_change' => false
+          'image' => nil,
+          'type' => 'user'
         }
       }
 
@@ -26,7 +29,7 @@ RSpec.describe 'Sessions', type: :request do
 
     it 'invalid password returns error message' do
       post '/api/v1/auth/sign_in', params: {
-        email: user.email, 
+        email: user.email,
         password: 'wrong_password'
       }, headers: headers
 
@@ -37,7 +40,7 @@ RSpec.describe 'Sessions', type: :request do
 
     it 'invalid email returns error message' do
       post '/api/v1/auth/sign_in', params: {
-        email: 'wrong@email.com', 
+        email: 'wrong@email.com',
         password: user.password
       }, headers: headers
 

@@ -24,6 +24,14 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+<<<<<<< HEAD
+=======
+    active_model_serializers (0.10.7)
+      actionpack (>= 4.1, < 6)
+      activemodel (>= 4.1, < 6)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
+>>>>>>> 543404e4482bcd0c0bd65040128a937de37d21c4
     activejob (5.2.0)
       activesupport (= 5.2.0)
       globalid (>= 0.3.6)
@@ -48,6 +56,8 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
+    case_transform (0.2)
+      activesupport
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     coveralls (0.8.21)
@@ -80,6 +90,8 @@ GEM
     i18n (1.0.0)
       concurrent-ruby (~> 1.0)
     json (2.1.0)
+    jsonapi-renderer (0.2.0)
+    jsonapi-rspec (0.0.2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -200,10 +212,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers (~> 0.10.2)
   bootsnap (>= 1.1.0)
   coveralls
   devise_token_auth
   factory_bot_rails
+  jsonapi-rspec
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   pry-byebug
