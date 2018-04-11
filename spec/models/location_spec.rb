@@ -11,5 +11,9 @@ RSpec.describe Location, type: :model do
     it { is_expected.to have_db_column :locale }
     it { is_expected.to have_db_column :user_id }
   end
+
+  describe 'Validations' do
+    it { is_expected.to validate_presence_of(:locale) }
+  end
 end
 
