@@ -16,7 +16,7 @@ RSpec.describe Api::V1::UserController, type: :request do
       end
     end
     
-    describe 'multibleUsers' do 
+    describe 'multipleUsers' do 
       context 'create two users' do
         before do
           2.times do
