@@ -20,8 +20,8 @@ RSpec.describe 'Sessions', type: :request do
           'name' => user.name,
           'nickname' => user.nickname,
           'image' => nil,
-          'gender' => nil,
-          'age' => nil,
+          'gender' => 'Male',
+          'age' => 14,
           'type' => 'user'
         }
       }
