@@ -3,22 +3,22 @@
    "type"=> "users",
    "attributes" => {
      "languages" => [],
-     "name" => "user1",
-     "email" => "email1@email.com"
+     "name" => "#{user.name}",
+     "email" => "email6@email.com"
 }},
 {
    "id" => "#{user.id+1}",
    "type"=> "users",
    "attributes" => {
      "languages" => [],
-     "name" => "user2",
-     "email" => "email2@email.com"
+     "name" => "user8",
+     "email" => "email7@email.com"
 }},
 {
    "id" => "#{user.id+2}",
    "type"=> "users",
    "attributes" => {
      "languages" => [],
-     "name" => "user3",
-     "email" => "email3@email.com"
+     "name" => "user9",
+     "email" => "email8@email.com"
 }}]}
