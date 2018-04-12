@@ -8,6 +8,8 @@ class UserSerializer < ActiveModel::Serializer
   end
 
   def location
-    LocationSerializer.new(object.location).as_json
+    if object.location
+      LocationSerializer.new(object.location).as_json
+    end
   end
 end
