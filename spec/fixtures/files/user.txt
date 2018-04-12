@@ -3,7 +3,7 @@
    "type"=> "users",
    "attributes" => {
      "languages" => [],
-     "location" => nil,
+     "location" => "#{user.location}",
      "name" => "#{user.name}",
      "email" => "#{user.email}",
      "age" => user.age,
